@@ -3,6 +3,7 @@ package com.central.lojas.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,5 +34,10 @@ public class ProductsController {
 	@PostMapping
 	public  Product saveProduct(@RequestBody Product product) {
 		return productServices.saveProduct(product);
+	}
+	
+	@DeleteMapping
+	public void deleteProduct(@RequestBody Product product) {
+		productServices.deleteProduct(product);
 	}
 }
