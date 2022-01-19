@@ -21,4 +21,8 @@ public class ProductServices {
 	public Product findProduct(long id) {
 		return productRepository.findById(id);
 	}
+	
+	public Product saveProduct(Product product) {
+		return productRepository.save(product);
+	}
 }
