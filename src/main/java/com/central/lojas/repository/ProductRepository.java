@@ -9,5 +9,5 @@ import com.central.lojas.models.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, UUID> {
-
+	Product findById(long id);
 }
