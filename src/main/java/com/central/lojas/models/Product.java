@@ -17,7 +17,6 @@ public class Product implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "id", updatable = false, unique = true, nullable = false)
 	private long id;
 	
 	private String name;
@@ -38,11 +37,11 @@ public class Product implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getLot() {
+	public String getBatch() {
 		return batch;
 	}
-	public void setLot(String lot) {
-		this.batch = lot;
+	public void setBatch(String batch) {
+		this.batch = batch;
 	}
 	public int getAmount() {
 		return amount;
