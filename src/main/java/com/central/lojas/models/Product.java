@@ -1,7 +1,6 @@
 package com.central.lojas.models;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +18,7 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, unique = true, nullable = false)
-	private UUID id;
+	private long id;
 	
 	private String name;
 	private String batch;
@@ -27,10 +26,10 @@ public class Product implements Serializable {
 	private double price;
 	private String size;
 	
-	public UUID getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(UUID id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getName() {
