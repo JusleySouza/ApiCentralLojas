@@ -10,10 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
 @Table(name="produtos")
 public class Product implements Serializable {
@@ -72,7 +68,4 @@ public class Product implements Serializable {
 		return "Product [id=" + id + ", name=" + name + ", batch=" + batch +
 				", amount=" + amount + ", price=" + price + ", size=" + size + "]";
 	}
-	
-	
-	
 }
